@@ -1,0 +1,8 @@
+.phpunit.cache
+.phpunit.result.cache
+composer.lock
+
+cov
+vendor
+
+phpunit.xml
