@@ -8,8 +8,8 @@ ability to subvert the issue.
 
 ## Why not just `assert()`?
 `assert()` is a (*deprecated as of 8.3*) built-in PHP method, designed for
-debugging, that will either throw an exception or omit a warning. This library
-is designed to throw exceptions only and purposefully fail your production code
+debugging, that will either throw an exception or omit a warning. `assert-php`
+is designed to throw exceptions only and to purposefully fail your production code
 in the cases of invalid expectations.
 
 ## Usage
