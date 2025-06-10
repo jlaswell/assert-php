@@ -1,7 +1,7 @@
 # Assert
 
 Assert is a simple set of assertions to help validate inputs, results, and
-business logic. Inspired by the thoughts of [TigerBeatle](https://tigerbeetle.com/blog/2023-12-27-it-takes-two-to-contract) 
+business logic. Inspired by the thoughts of [TigerBeetle](https://tigerbeetle.com/blog/2023-12-27-it-takes-two-to-contract) 
 and [NASA’s Power of 10 Rules for Safety-Critical Code](https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code),
 this library aims to painfully enforce the validity in order to fail without the
 ability to subvert the issue.
