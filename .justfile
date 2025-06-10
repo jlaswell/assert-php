@@ -13,11 +13,11 @@ composer *args:
     {{drun-base}} composer {{args}}
 
 # Run phpstan
-psalm *args:
-    {{drun-cli}} ./vendor/bin/psalm.phar {{args}}
+phpstan *args:
+    {{drun-cli}} ./vendor/bin/phpstan analyse {{args}}
 
-psalm-baseline:
-    just psalm --set-baseline=psalm-baseline.xml
+phpstan-baseline:
+    {{drun-cli}} ./vendor/bin/phpstan analyse --generate-baseline
 
 # Run phpunit
 phpunit *args:
@@ -29,7 +29,7 @@ phpunit-coverage *args:
 
 test:
     just phpunit
-    just psalm
+    just phpstan
 
 run *args:
     {{drun-cli}} {{args}}
