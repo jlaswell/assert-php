@@ -2,8 +2,8 @@
 set shell := ["bash", "-c"]
 
 drun := "docker run -it -w /data -v ${PWD}:/data:delegated"
-drun-base := "docker run -it -w /data -v ${PWD}:/data:delegated --rm registry.gitlab.com/grahamcampbell/php:8.2-base"
-drun-cli := "docker run -it -w /data -v ${PWD}:/data:delegated --rm registry.gitlab.com/grahamcampbell/php:8.2-cli"
+drun-base := "docker run -it -w /data -v ${PWD}:/data:delegated --rm registry.gitlab.com/grahamcampbell/php:8.4-base"
+drun-cli := "docker run -it -w /data -v ${PWD}:/data:delegated --rm registry.gitlab.com/grahamcampbell/php:8.4-cli"
 
 _default:
   @just --choose
@@ -25,7 +25,7 @@ phpunit *args:
 
 # Run phpunit with coverage
 phpunit-coverage *args:
-    {{drun}} -e XDEBUG_MODE=coverage --rm registry.gitlab.com/grahamcampbell/php:8.2 vendor/bin/phpunit --coverage-html cov {{args}}
+    {{drun}} -e XDEBUG_MODE=coverage --rm registry.gitlab.com/grahamcampbell/php:8.4 vendor/bin/phpunit --coverage-html cov {{args}}
 
 test:
     just phpunit
