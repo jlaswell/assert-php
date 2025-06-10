@@ -64,7 +64,7 @@ final class AssertTest extends TestCase
     }
 
     #[DataProvider('provideFalseData')]
-    public function isIsTrueOnFailure(bool $data): void
+    public function testIsTrueOnFailure(bool $data): void
     {
         $this->expectException(AssertionException::class);
         $this->expectExceptionMessage('$value does not meet assertion');
