@@ -29,7 +29,7 @@ Assert::that(sizeof($records) > 0);
 ```php
 public function fill(array $values): array
 {
-    Assert::that(sizeof($value) > 0);
+    Assert::that(sizeof($values) > 0);
     Assert::that(sizeof($values) === sizeof(array_filter($values, fn ($value) => is_int($value))));
 
     // logic can now perform on an array with values of integers
